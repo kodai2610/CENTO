@@ -1,0 +1,40 @@
+@charset "UTF-8";
+$wide: 1920px;
+$tab: 1200px;
+$sp: 750px;
+$ssp: 460px;
+@mixin wide {
+    @media (min-width: ($wide)) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+@mixin ssp {
+    @media (max-width: ($ssp)) {
+        @content;
+    }
+}
+
+@import "sass/commons";
+@import "sass/header";
+@import "sass/fv";
+@import "sass/service";
+@import "sass/news";
+@import "sass/member";
+@import "sass/recruit";
+@import "sass/company";
+@import "sass/contact";
+@import "sass/page/common-lower-pages";
+@import 'sass/page/news-archive'

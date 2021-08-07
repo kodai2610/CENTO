@@ -1,0 +1,133 @@
+//service newsトップ
+
+#pagetitle_view {
+   height: 380px;
+   background: linear-gradient(rgba(86, 153, 206, 0.8), rgba(86, 153, 206, 0.8)), url(../img/servicepage-top.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position:relative;
+
+   .section_title {
+      padding-top: 120px;
+      z-index: 10;
+   }
+}
+
+
+// パンくずリスト
+.breadclumb {
+   height:70px;
+   display:flex;
+   p, span {
+      padding: 0 5px;
+      line-height: 70px;
+   }
+}
+
+// サービス、ニュース共通コンテナー------
+.lower_content-container {
+   background: linear-gradient(rgba(242, 242, 242, 0.8), rgba(242, 242, 242, 0.8)), url(../img/servicepage-main.jpg);
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position:relative;
+   
+   
+}
+.lower-content {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 26px;
+   padding: 140px 0;
+   margin: 0 auto;
+   width: 68%;
+
+   @include wide {
+      width: 70%;
+      gap: 50px;
+   }
+   @include tab {
+      width: 90%;
+   }
+   
+   @include sp {
+      display: block;
+      margin: 0 auto;
+      
+   }
+   
+}
+
+.lower_item {
+   max-width: 700px;
+   min-height: 530px;
+   // height:inherit;
+   background: #ffffff;
+   box-sizing: border-box;
+   padding: 30px;
+   margin: 0 auto;
+   @include wide {
+      max-width: 900px;
+   }
+   @include sp {
+      margin-bottom: 30px;
+      max-width: 90%;
+   }
+   @include ssp {
+      max-width: 95%;
+   }
+   
+}
+.service_item-text,
+.news_item-text {
+   padding-bottom: 20px;
+   line-height: 1.7em;
+} //共通
+
+
+//サービスページのスタイリング-------------
+.item_title {
+   margin-bottom: 30px;
+   img {
+      width: 40px;  
+      @include wide {
+         width: 50px;
+      }
+   }
+   .item_project {
+      display:inline-block;
+      font-size: 18px;
+      color: #5699CE;
+      font-weight: 600;
+      margin-left: 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #5699CE;
+      @include wide {
+         font-size: 1.1rem;
+      }
+   }
+}
+
+.service_item-4 {
+   
+   img {
+      width:33px;
+   }
+}
+
+
+
+
+
+
+//フッター
+
+.page_footer {
+   height: 150px;
+}
+.pagecopy {
+   line-height: 150px;
+   text-align: center;
+}
+

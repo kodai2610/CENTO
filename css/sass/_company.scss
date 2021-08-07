@@ -1,0 +1,115 @@
+#company {
+    position: relative;
+    height: 800px;
+    @include wide {
+        height: 950px;
+    }
+    @include tab {
+        height: 1200px;
+    }
+    @include ssp {
+        height: 1500px;
+    }
+    .company-title {
+        padding-top: 130px;
+        padding-bottom: 200px;
+        max-width: 72vw;
+        padding-left: 5%;
+        @include sp {
+            padding-left: 2%;
+        }
+    }
+}
+
+.overview {
+    border: 1px solid #E5E5E5;
+    max-width: 700px;
+    width: 38vw;
+    border-collapse: collapse;
+    position: absolute;
+    top: 280px;
+    left: 16%;
+    z-index: 5;
+    @include wide {
+        max-width: 800px;
+    }
+    @include tab {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+    @include sp {
+        max-width: 88.933vw;
+    }
+    th {
+        background: #E5E5E5;
+        border: 1px solid #ffffff;
+        padding: 10px;
+        @include ssp {
+            padding: 10px 5px;
+        }
+        br {
+            display: none;
+            @include ssp {
+                display: block;
+            }
+        }
+    }
+    td {
+        border: 1px solid #E5E5E5;
+        padding: 10px;
+        background: #ffffff;
+    }
+    th,
+    td {
+        @include ssp {
+            display: block;
+            border: 1px solid #E5E5E5;
+        }
+    }
+}
+
+.ggmap {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.map {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-top: 800px;
+    top: -240px;
+    right: 0;
+    @include tab {
+        top: 150px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+    }
+    @include sp {
+        top: 160px;
+    }
+    @include ssp {
+        top: 470px;
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42.763vw;
+        height: 70%;
+        @include wide {
+            width: 36.45vw;
+        }
+        @include tab {
+            width: 650px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+        @include sp {
+            width: 100%;
+        }
+    }
+}

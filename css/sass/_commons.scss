@@ -1,0 +1,311 @@
+body {
+   font-family: 'Work Sans', sans-serif;
+   font-size: 16px;
+   color: #323232;
+   width: 100%;
+   @include wide{
+      font-size: 1.1rem;
+   }
+   
+}
+p {
+   line-height: 1.5em;
+}
+
+img {
+   width: 100%;
+}
+
+
+.wrapper {
+   width: 68%;
+   margin: 0 auto;
+   @include sp {
+      width: 92%;
+      margin: 0 auto;
+   }
+}
+
+
+
+.blue-box {
+   background: #5699CE;
+}
+
+.title-white {
+   
+   .read {
+      color: #5699CE;
+      background: #ffffff;
+      width: inherit;
+      font-size: 0.9em;
+      // font-size: 10px;
+      padding: 4px;
+      text-align: center;
+      display: inline;
+      @include wide {
+         font-size: 1.1rem;
+         
+      }
+   }
+   .title-wh {
+      font-size: 56px;
+      color: #ffffff;
+      padding: 10px 0;
+      font-weight: 600;
+      @include wide {
+         font-size: 70px;
+      }
+      
+      @include sp {
+         font-size: 50px;
+      }
+      @include ssp {
+         font-size: 40px;
+      }
+   }
+   .expo_1 {
+      color: #ffffff;
+   }
+}
+
+.title-black {
+   margin: 0;
+   .read {
+      color: #ffffff;
+      background: #323232;
+      width: inherit;
+      font-size: 0.9em;
+      padding: 4px;
+      text-align: center;
+      display: inline;
+      @include wide {
+         font-size: 1.1rem;
+         
+      }
+   }
+   .title-bl {
+      font-size: 56px;
+      color: #323232;
+      padding: 10px 0;
+      font-weight: 600;
+      @include wide {
+         font-size: 70px;
+      }
+      @include sp {
+         font-size: 50px;
+      }
+      @include ssp {
+         font-size: 40px;
+      }
+   }
+   .expo_2 {
+      color: #323232;
+      
+   }
+}
+
+
+//削除予定
+.arrow {
+   position: relative;
+   display: block;
+   // width: 23px; 元の長さ
+   width: 1.5vw;
+   height: 1px;
+   background-color: #ffffff;
+   @include sp {
+      width: 3.67vw
+   }
+
+   &::before {
+      content: "";
+      position: absolute;
+      // top: 3px; 元の長さ
+      top: 0.197vw;
+      // right: -1px; 元の長さ
+      right: -0.066vw;
+      display: block;
+      // width: 9px; 元の長さ
+      width: 0.5vw;
+      height: 1px;
+      background-color: #ffffff;
+      transform: rotate(-45deg);
+      @include sp {
+         top:0.4vw;
+         right: -0.133vw;
+         width:1.2vw;
+      }
+   }
+   &::after {
+      content: "";
+      position: absolute;
+      // bottom: 3px; 元の長さ
+      bottom: 0.197vw;
+      // right: -1px; 元の長さ
+      right: -0.066vw;
+      display: block;
+      // width: 9px; 元の長さ
+      width: 0.5vw;
+      height: 1px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
+      @include sp {
+         bottom:0.4vw;
+         right: -0.133vw;
+         width:1.2vw;
+      }
+      
+   }
+}
+
+
+//セクションリンクボタン---------------------
+
+.btn {
+   
+   // width: 160px;
+   // height: 30px;
+   width: 170px;
+   height: 40px;
+   text-align: center;
+   display: block;
+   margin: 100px auto 0;
+   background: #323232;
+   @include wide {
+      width: 200px;
+      height: 37.5px;
+   }
+   
+}
+
+.btn-move {
+   position: relative;
+   overflow: hidden;
+   // width: 160px;
+   // height: 30px;
+   width: 170px;
+   height: 40px;
+   display: inline-block;
+   border: 1px solid #323232;
+   text-align: center;
+   outline: none;
+   // line-height: 30px;
+   line-height: 40px;
+   transition: ease .2s;
+   @include wide {
+      width: 200px;
+      height: 38px;
+      line-height: 38px;
+   }
+
+   span {
+      position: relative;
+      z-index: 3;
+      color:#ffffff;
+   }
+
+   
+}
+
+.btn-move:hover span{
+   color:#323232;
+}
+
+.sideway:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   background:#ffffff;
+   width: 100%;
+   height: 100%;
+   transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+   transform: scale(0, 1);
+   transform-origin: right top;
+}
+
+.sideway:hover:before{
+   transform-origin:left top;
+   transform:scale(1, 1);
+}
+
+
+
+//LINEボタン--------------------
+
+.line-btn {
+   // width: 160px;
+   // height: 30px;
+   width: 170px;
+   height: 40px;
+   text-align: center;
+   display: block;
+   margin: 100px auto 0;
+   // border: 1px solid #323232;
+   background: #03ba04;
+   
+   @include wide{
+      font-size: 1.1rem;
+      width: 200px;
+      height: 37.5px;
+   }
+
+}
+
+.line-move {
+   position: relative;
+   overflow: hidden;
+   // width: 160px;
+   // height: 30px;
+   width: 170px;
+   height: 40px;
+   display: inline-block;
+   text-align: center;
+   outline: none;
+   // line-height: 30px;
+   line-height: 40px;
+   transition: ease .2s; 
+   @include wide{
+      font-size: 1.1rem;
+      width: 200px;
+      height: 37.5px;
+      line-height: 37.5px;
+   }
+
+
+   span {
+      position: relative;
+      z-index: 3;
+      color:#ffffff;
+   }
+
+   
+}
+
+.line-move:hover span{
+   color:#ffffff;
+}
+
+.sideway-line:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   background:#323232;
+   width: 100%;
+   height: 100%;
+   
+   transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+   transform: scale(0, 1);
+   transform-origin: right top;
+}
+
+.sideway-line:hover:before{
+   transform-origin:left top;
+   transform:scale(1, 1);
+}
+
+

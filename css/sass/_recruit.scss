@@ -1,0 +1,224 @@
+#recruit {
+   padding: 100px 0;
+   position: relative;
+
+   
+   .section_title {
+      padding-bottom: 60px;
+   }
+   
+}
+
+.recruit_container {
+   display: flex;
+   justify-content: space-between;
+   gap: 40px;
+
+
+   .recruit-item {
+      
+      width: calc(100%/3);
+      
+   
+      img {
+         min-width: 21.053vw;
+         width: 100%;
+         min-height: auto;
+      }
+      .work {
+         padding: 10px 0;
+         line-height: 1.5rem;
+         .profession {
+            font-size: 18px;
+            padding-bottom: 10px;
+            -webkit-text-stroke: 0.5px #323232;
+            color: #ffffff;
+            @include wide{
+               font-size: 1.1rem;
+            }
+         }
+         .frame {
+            // width: 140px;
+            width: 170px;
+            background: #F2F2F2;
+            padding:3px 8px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            @include wide{
+               font-size: 1.1rem;
+               width: 230px;
+            }
+         }
+         
+         
+      }
+   }
+   .item2 {
+      margin-top: 60px;
+   }
+   .item3 {
+      margin-top: 120px;
+   }
+   @include sp {
+      display: none;
+   }
+}
+
+//sp slick 
+.recruit_slick {
+   display: none;
+   padding: 20px 0 50px;
+   @include sp {
+      display: block;
+      
+   }
+   
+
+   .recruit-item {
+      object-fit: cover;
+      box-sizing: border-box;
+      width: 42.667px;
+      padding: 0 20px;
+      
+      
+      img {
+         width: 100%;
+      }
+      .work {
+         padding: 10px 0;
+         line-height: 1.5rem;
+         .profession {
+            font-size: 18px;
+            padding-bottom: 10px;
+            -webkit-text-stroke: 0.5px #323232;
+            color: #ffffff;
+            
+         }
+         .frame {
+            width: 170px;
+            background: #F2F2F2;
+            padding:3px 8px;
+            font-size: 12px;
+            margin-bottom: 10px;
+         }
+         
+         
+      }
+   }
+   .next.slick-arrow {
+      position: absolute;
+      top:-85px;
+      right: 5vw;
+      cursor: pointer;
+      display: block;
+      font-size: 12px;
+
+      &::before {
+         right: 0;
+         width: 30px;
+         height: 1px;
+         background: #323232;
+         position: absolute;
+         top: -46px;
+         bottom: 0;
+         margin: auto;
+         content: "";
+         vertical-align: middle;
+         @include ssp {
+            top: -38px;
+            width: 6.667vw;
+         }
+      }
+      &::after {
+         position: absolute;
+         top: -20px;
+         margin: auto;
+         content: "";
+         vertical-align: middle;
+         right: 0;
+         width: 7px;
+         height: 7px;
+         border-top: 1px solid #323232;
+         border-right: 1px solid #323232;
+         -webkit-transform: rotate(45deg);
+         transform: rotate(45deg);
+         @include ssp {
+            top: -16px;
+         }
+      }
+
+      @include ssp {
+         top: -50px;
+      
+      }
+      
+
+   }
+
+   .prev.slick-arrow {
+      position: absolute;
+      top:-85px;
+      right: 15vw;
+      cursor: pointer;
+      display: block;
+      display: block;
+      font-size: 12px;
+      @include ssp {
+         right: 20vw;
+      }
+
+      &::before {
+         left: 0;
+         // width: 4vw;
+         width: 30px;
+         height: 1px;
+         background: #323232;
+         position: absolute;
+         top: -46px;
+         bottom: 0;
+         margin: auto;
+         content: "";
+         vertical-align: middle;
+         @include ssp {
+            top: -38px;
+            width: 6.667vw;
+         }
+      }
+      &::after {
+         position: absolute;
+         top: -20px;
+         margin: auto;
+         content: "";
+         vertical-align: middle;
+         left: 0;
+         width: 7px;
+         height: 7px;
+         border-top: 1px solid #323232;
+         border-right: 1px solid #323232;
+         -webkit-transform: rotate(-135deg);
+         transform: rotate(-135deg);
+         @include ssp {
+            top:-16px;
+         }
+      }
+
+      @include ssp {
+         top: -50px;
+      }
+
+   }
+   
+   
+}
+
+.details {
+   text-align: center;
+   font-size: 13px;
+   padding: 50px 0 20px;
+   @include wide{
+      font-size: 1.1rem;
+      
+   }
+
+}
+

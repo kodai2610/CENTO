@@ -1,0 +1,66 @@
+#fv {
+   height: 140vh;
+   position: relative;
+   background-image: url(../img/top_bg.png);
+   background-position: center;
+   @include wide {
+      max-height: 1600px;
+   }
+}
+.title-box {
+   max-width: 600px;
+   width: inherit;
+   position: absolute;
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   h2 {
+      font-size: 3.75vw;
+      letter-spacing: 1rem;
+      line-height: 1.5em;
+      margin-bottom: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+      @include tab {
+         font-size: 5.33vw;
+         line-height: 1.3em;  
+      }
+      @include sp {
+         font-size: 6vw;
+      }
+      @include ssp {
+         font-size: 8vw;
+         letter-spacing: 0.4rem;
+            
+      }  
+   }
+         
+         
+      p {
+         padding: 15px 0 5px;
+         border-bottom: 1px solid #323232;
+         display: inline;
+         font-size: 14px;
+         @include ssp {
+            font-size: 12px;
+         }
+      }
+
+   }
+
+
+   .fvcopy {
+      position: absolute;
+      bottom: 350px;
+      right: 20px;
+      width: inherit;
+   }
+   .copy {
+      font-size: 9px;
+      
+      @include wide{
+         font-size: 1.1rem;
+      }
+   }
+      
+      

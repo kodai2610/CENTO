@@ -1,0 +1,180 @@
+.ly_wrapper {
+  padding: 140px 0;
+  background: linear-gradient(rgba(242, 242, 242, 0.8), rgba(242, 242, 242, 0.8)), url(../img/servicepage-main.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &_inner {
+    width: 68%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @include tab {
+      width: 90%;
+      flex-direction: column;
+    }
+  }
+}
+
+.breadclumb__newsAr {
+  @include tab {
+    width: 92%;
+  }
+}
+
+.ly_main {
+  width: 70%;
+  @include tab {
+    width: 100%;
+  }
+}
+
+
+.ly_side {
+  width: 26%;
+  @include tab {
+    width: 100%;
+    margin-top: 60px; 
+  }
+}
+
+
+.bl_news {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 30px;
+  overflow: hidden;
+
+  & + & {
+    margin-top: 26px;
+    @include tab {
+      margin-top: 30px;
+    }
+  }
+  @include sp {
+    padding: 15px;    
+    justify-content: unset;
+    flex-direction: column;
+  }
+}
+
+.bl_news_imgWrapper {
+  width: 33%;
+  height: auto;
+  @include sp {
+    width: 100%;
+  }
+  & > img {
+    width: 100%;
+  }
+
+}
+
+.bl_news_body {
+  width: 62%;
+  @include sp {
+    width: auto;
+    padding: 20px 0;
+  }
+}
+
+.bl_news_time {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.bl_news_ttl {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  @include sp {
+    font-size: 18px;
+  }
+}
+
+.bl_news_txt {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.bl_side {
+  background-color: #ffffff;
+  &.bl_side_pop {
+    margin-top: 30px;
+  }
+}
+
+.bl_side_ttl {
+  padding: 30px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  border-bottom: 1px dotted #979696;
+}
+
+.bl_sideItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+
+  &:not(:last-child) {
+    border-bottom: 1px dotted #979696;
+  }
+}
+
+.bl_sideItem_imgWrapper {
+  margin-right: 4%;
+  @include tab {
+    margin-right: 20px;
+  }
+  & > img {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+.bl_sideItem_ttl {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+
+.bl_pagination {
+  margin-top: 100px;
+}
+
+.page-numbers {
+  text-align: center;
+}
+
+.bl_pagination li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.bl_pagination span {
+  color: #323232; 
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+
+  &.current {
+    background-color: #323232;
+    color: #fff;
+  }
+}
+
+

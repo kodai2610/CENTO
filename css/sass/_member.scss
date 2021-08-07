@@ -1,0 +1,174 @@
+#member {
+    position: relative;
+    padding-bottom: 100px;
+    .member-title {
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        .section_title {
+            padding-top: 120px;
+            padding-bottom: 150px;
+            background: #5699CE;
+        }
+    }
+    .btn {
+        margin-top: 100px;
+    }
+}
+
+.member-lists {
+    padding-top: 380px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    @include sp {
+        display: block;
+    }
+    .member-list {
+        margin: 0 20px;
+        width: 21.053vw;
+        object-fit: cover;
+        box-sizing: border-box;
+        @include sp {
+            width: 80%;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+        }
+        .profile {
+            padding: 10px 0;
+            line-height: 1.5rem;
+            .name {
+                font-size: 14px;
+                padding-bottom: 10px;
+                @include wide {
+                    font-size: 1.1rem;
+                }
+            }
+            .frame {
+                width: 135px;
+                background: #F2F2F2;
+                padding: 3px 8px;
+                font-size: 10px;
+                margin-bottom: 10px;
+                @include wide {
+                    font-size: 1.1rem;
+                    width: 190px;
+                }
+            }
+        }
+    }
+    //slick arrow
+    .next.slick-arrow {
+        position: absolute;
+        top: 280px;
+        right: 18vw;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 12px;
+        display: block;
+        @include wide {
+            font-size: 1.1rem;
+        }
+        @include sp {
+            right: 5vw;
+        }
+        @include ssp {
+            top: 320px;
+        }
+        &::before {
+            right: 0;
+            width: 30px;
+            height: 1px;
+            background: #ffffff;
+            position: absolute;
+            top: -46px;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            vertical-align: middle;
+            @include wide {
+                width: 50px;
+            }
+            @include ssp {
+                width: 6.667vw;
+            }
+        }
+        &::after {
+            position: absolute;
+            top: -20px;
+            margin: auto;
+            content: "";
+            vertical-align: middle;
+            right: 0;
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            @include wide {
+                width: 10px;
+                height: 10px;
+                top: -18px;
+            }
+        }
+    }
+    .prev.slick-arrow {
+        position: absolute;
+        top: 280px;
+        right: 23vw;
+        color: #ffffff;
+        cursor: pointer;
+        display: block;
+        font-size: 12px;
+        @include wide {
+            font-size: 1.1rem;
+        }
+        @include sp {
+            right: 15vw;
+        }
+        @include ssp {
+            top: 320px;
+            right: 20vw;
+        }
+        &::before {
+            left: 0px;
+            width: 30px;
+            height: 1px;
+            background: #ffffff;
+            position: absolute;
+            top: -46px;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            vertical-align: middle;
+            @include wide {
+                width: 50px;
+            }
+            @include ssp {
+                width: 6.667vw;
+            }
+        }
+        &::after {
+            position: absolute;
+            top: -20px;
+            margin: auto;
+            content: "";
+            vertical-align: middle;
+            left: 0px;
+            width: 7px;
+            height: 7px;
+            border-top: 1px solid #ffffff;
+            border-right: 1px solid #ffffff;
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+            @include wide {
+                width: 10px;
+                height: 10px;
+                top: -18px;
+            }
+        }
+    }
+}

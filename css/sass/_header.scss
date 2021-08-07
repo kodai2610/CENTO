@@ -1,0 +1,246 @@
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo.logo_top {
+    width: 16.447vw;
+    @include sp {
+        width: 29.333vw;
+    }
+    @include ssp {
+        width: 39.13vw;
+    }
+}
+
+// .pagelogo { //下層ページのロゴサイズ
+//    width: 105px;
+//    margin-left: 2.5%;
+//    @include wide {
+//       width: 6.9vw;
+//    }  
+//    @include sp{
+//       margin-left: 1.5%;
+//    }
+// }
+.pc-nav {
+    // width: 420px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    @include wide {
+        width: 600px;
+    }
+    @include sp {
+        display: none;
+    }
+}
+
+.nav-list {
+    padding: 35px 0;
+    .stroke {
+        font-size: 16px;
+        -webkit-text-stroke: 0.5px #323232;
+        color: #ffffff;
+        vertical-align: middle;
+        transition: .5s;
+        @include wide {
+            font-size: 1.1rem;
+        }
+        &:hover {
+            color: #696868;
+        }
+    }
+}
+
+.libtn {
+    //お問い合わせボタン
+    width: 120px;
+    height: 26px;
+    background: #323232;
+    padding: 0;
+    margin-top: 32px;
+    @include wide {
+        width: 150px;
+    }
+    .btn-move {
+        position: relative;
+        overflow: hidden;
+        width: 120px;
+        height: 26px;
+        display: inline-block;
+        border: 1px solid #323232;
+        text-align: center;
+        outline: none;
+        line-height: 26px;
+        transition: ease .2s;
+        @include wide {
+            width: 150px;
+        }
+        span {
+            position: relative;
+            z-index: 3;
+            color: #ffffff;
+        }
+    }
+    .btn-move:hover span {
+        color: #323232;
+    }
+    .sideway:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: #ffffff;
+        width: 100%;
+        height: 100%;
+        transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+        transform: scale(0, 1);
+        transform-origin: right top;
+    }
+    .sideway:hover:before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+    }
+}
+
+//SPメニュー-----------
+#slide-nav {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    transition: all 0.3s;
+}
+
+#slide-nav.panelactive {
+    opacity: .8;
+    z-index: 100;
+}
+
+#slide-nav.panelactive #slide-nav-list {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/*ナビゲーション*/
+
+#slide-nav ul {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#slide-nav.panelactive ul {
+    display: block;
+}
+
+.slide-list {
+    padding: 10px 0;
+    .stroke {
+        font-size: 18px;
+        -webkit-text-stroke: 0.5px #ffffff;
+        color: #323232;
+        &:hover {
+            color: #e0dede;
+        }
+    }
+    a {
+        padding: 7px 14px;
+        display: block;
+        font-size: 18px;
+    }
+    &:nth-last-child(1) {
+        padding: 0;
+        a {
+            padding: 7px 14px;
+            display: block;
+            background: #ffffff;
+            font-size: 18px;
+            transition: .3s;
+            &:hover {
+                background: #918f8f;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+#slide-nav li {
+    &:nth-last-child(1) {
+        display: block;
+        background: #ffffff;
+        font-size: 18px;
+    }
+}
+
+//ボタン------------
+.openbtn {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    @include sp {
+        display: block;
+    }
+}
+
+.openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #323232;
+    width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+    top: 17px;
+}
+
+.openbtn span:nth-of-type(2) {
+    top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+    top: 29px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+    background: #ffffff;
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+    background: #ffffff;
+}
