@@ -2076,6 +2076,108 @@ img {
   line-height: 1.5;
 }
 
+.bl_singleNews {
+  padding: 50px 50px 100px 50px;
+  background-color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .bl_singleNews {
+    padding: 30px 15px 80px 15px;
+  }
+}
+
+.bl_singleNews_time {
+  display: block;
+  font-size: 14px;
+}
+
+.bl_singleNews_ttl {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+  .bl_singleNews_ttl {
+    font-size: 24px;
+  }
+}
+
+.bl_singleNews_imgWrapper {
+  margin-top: 40px;
+}
+
+@media (max-width: 1200px) {
+  .bl_singleNews_imgWrapper {
+    margin-top: 30px;
+  }
+}
+
+.bl_singleNews_txt {
+  margin-top: 50px;
+}
+
+@media (max-width: 1200px) {
+  .bl_singleNews_txt {
+    margin-top: 40px;
+  }
+}
+
+.bl_singleNews_txt > p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .bl_singleNews_txt > p {
+    font-size: 16px;
+  }
+}
+
+.bl_singleNews_txt > p:not(:first-child) {
+  margin-top: 30px;
+}
+
+@media (max-width: 1200px) {
+  .bl_singleNews_txt > p:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.bl_pagination {
+  margin-top: 100px;
+}
+
+.page-numbers {
+  text-align: center;
+}
+
+.bl_pagination li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.bl_pagination span {
+  color: #323232;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bl_pagination span.current {
+  background-color: #323232;
+  color: #fff;
+}
+
 .bl_side {
   background-color: #ffffff;
 }
@@ -2120,36 +2222,4 @@ img {
 .bl_sideItem_ttl {
   font-size: 14px;
   font-weight: 600;
-}
-
-.bl_pagination {
-  margin-top: 100px;
-}
-
-.page-numbers {
-  text-align: center;
-}
-
-.bl_pagination li {
-  display: inline-block;
-  margin-right: 4px;
-}
-
-.bl_pagination span {
-  color: #323232;
-  background: #fff;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  margin: 0;
-  display: inline-block;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.bl_pagination span.current {
-  background-color: #323232;
-  color: #fff;
 }

@@ -2,71 +2,12 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CENTO inc.</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-
-    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
-    <link href="slick/slick.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png">
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+  <?php get_header(); ?>
 </head>
 
 <body>
     <div id="fv">
-        <header class="header">
-            <div class="header-top">
-                <h1 class="logo logo_top">
-                    <a href="index.html"><img src="img/logo.png" alt=""></a>
-                </h1>
-                <nav>
-                    <ul class="pc-nav">
-                        <li class="nav-list"><a href="#service-top" class="stroke">SERVICE</a></li>
-                        <li class="nav-list"><a href="#news" class="stroke">NEWS</a></li>
-                        <li class="nav-list"><a href="#recruit" class="stroke">RECRUIT</a></li>
-                        <li class="nav-list"><a href="#company" class="stroke">COMPANY</a></li>
-                        <li class="libtn"><a href="#contact" class="btn-move sideway"><span>お問い合わせ</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-            <!--header-top-->
-
-
-
-            <div class="openbtn">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <!--openbtn-->
-
-
-
-            <nav id="slide-nav">
-                <div id="slide-nav-list">
-                    <ul>
-                        <li class="slide-list"><a href="#service-top" class="stroke">SERVICE</a></li>
-                        <li class="slide-list"><a href="#news" class="stroke">NEWS</a></li>
-                        <li class="slide-list"><a href="#recruit" class="stroke">RECRUIT</a></li>
-                        <li class="slide-list"><a href="#company" class="stroke">COMPANY</a></li>
-                        <li class="slide-list"><a href="#contact">お問い合わせ</a></li>
-
-                    </ul>
-                </div>
-            </nav>
-
-
-        </header>
-
+        <?php get_template_part('includes/header'); ?>
         <div class="title-box wrapper">
             <h2>変化を楽しみ、<br>価値を生み出す</h2>
             <p>ENJOY CHANGE & CREATE VALUE</p>
@@ -394,18 +335,14 @@
         </div>
         <!--form-->
         <footer class="page_footer">
-            <p class="pagecopy wrapper">
-                <small>© 2021 CENTO.inc All Rights Reserved</small>
-            </p>
+          <p class="pagecopy wrapper">
+              <small>© 2021 CENTO.inc All Rights Reserved</small>
+          </p>
         </footer>
     </section>
 
 
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/main.js"></script>
+  <?php get_footer(); ?>
 </body>
 
 </html>
