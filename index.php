@@ -85,35 +85,17 @@
                 <p class="read">ニュース</p>
                 <h3 class="title-bl">NEWS</h3>
             </div>
-
+            
+            <?php if(have_posts()) : ?>
             <div class="news-box wrapper">
+              <?php while(have_posts()) : the_post(); ?>
                 <dl>
-                    <dt><time datetime="2021-06-11">2021.06.11</time></dt>
-                    <dd>面積2．5倍恵比/代官山の新オフィスへ移転しました</dd>
+                    <dt><time datetime="<?php the_time('Y-m-d');?>"><?php the_time('Y.m.d'); //the_dateは同じ日付が一回しか表示されない ?></time></dt>
+                    <dd><?php the_title(); ?></dd>
                 </dl>
-                <dl>
-                    <dt><time datetime="2021-06-11">2021.06.11</time></dt>
-                    <dd>コミニュケーションの質を上げる福利厚生を創るまで</dd>
-                </dl>
-                <dl>
-                    <dt><time datetime="2021-06-11">2021.06.11</time></dt>
-                    <dd>ストーリーボードを社内のミーテ.ィングで使ってみたハナシ</dd>
-                </dl>
-
-                <dl>
-                    <dt><time datetime="2021-06-11">2021.06.11</time></dt>
-                    <dd>セブンデックスがベストベンチャー100に選出されました</dd>
-                </dl>
-                <dl>
-                    <dt><time datetime="2021-06-11">2021.06.11</time></dt>
-                    <dd>UIデザイナーが気をつけておきたい著作権のこと</dd>
-                </dl>
-                <dl>
-                    <dt><time datetime="2021-06-11">2021.06.11</time></dt>
-                    <dd>渋谷オフィス周辺のおすすめテイクアウトランチ６選</dd>
-                </dl>
-
+              <?php endwhile; ?>  
             </div>
+            <?php endif; ?>
             <!--news-box-->
 
             <button class="btn"><a href="news.html" class="btn-move sideway"><span>一覧はこちら</span></a></button>

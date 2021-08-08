@@ -20,6 +20,26 @@ function my_script_init() {
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
+/* ページによる投稿の表示数の切り替え */
+function change_posts_per_page($query) {
+  if (!is_admin() && $query->is_home() && $query->is_main_query()) { //トップページかつメインクエリの時
+    $query->set('post_type', 'post'); //queryインスタンスのsetというメソッドにアクセス
+    $query->set('posts_per_page', '6');
+  } 
+}
+add_action('pre_get_posts', 'change_posts_per_page');
 
+/* アーカイブページの作成 */
+function post_has_archive($args, $post_type) {
+  if('post' == $post_type) {
+    $slug = 'news';
+    $args['rewrite'] = array(
+      'slug' => $slug, //スラッグ名の変更を許可
+      'with_front' => false, // パーマリンク設定を/newsにしたときに /news/newsにならないようにする
+    );
+    $args['has_archive'] = $slug;
+  }
+  return $args;
+}
 
-
+add_filter('register_post_type_args', 'post_has_archive', 10, 2);
