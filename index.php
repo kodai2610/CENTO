@@ -36,7 +36,7 @@
 
                 <div class="circle">
                     <div class="circle-link">
-                        <img src="img/icon_work.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/icon_work.png" alt="">
                         <p>クライアントワーク事業</p>
                         <!-- <div class="arrow"></div> -->
                     </div>
@@ -45,7 +45,7 @@
 
                 <div class="circle">
                     <div class="circle-link">
-                        <img src="img/icon_ses.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/icon_ses.png" alt="">
                         <p>SES事業</p>
                         <!-- <div class="arrow"></div> -->
                     </div>
@@ -53,7 +53,7 @@
 
                 <div class="circle">
                     <div class="circle-link">
-                        <img src="img/icon_marketing.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/icon_marketing.png" alt="">
                         <p>マーケティング事業</p>
                         <!-- <div class="arrow"></div> -->
                     </div>
@@ -62,7 +62,7 @@
 
                 <div class="circle">
                     <div class="circle-link">
-                        <img src="img/icon_ec.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/icon_ec.png" alt="">
                         <p>EC事業</p>
                         <!-- <div class="arrow"></div> -->
                     </div>
@@ -71,7 +71,7 @@
             <!--circle_container-->
 
             <div class="pattern-square">
-                <img src="img/img_service.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/img_service.png" alt="">
             </div>
 
             <button class="btn"><a href="service.html" class="btn-move sideway"><span>詳細はこちら</span></a></button>
@@ -131,7 +131,7 @@
 
             <div class="member-lists wrapper">
                 <div class="member-list" id="wrap">
-                    <img src="img/img_engineer.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
                     <div class="profile">
                         <p class="name">山田 太郎</p>
                         <p class="frame">システムエンジニア</p>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <div class="member-list">
-                    <img src="img/img_engineer.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
                     <div class="profile">
                         <p class="name">山田 太郎</p>
                         <p class="frame">システムエンジニア</p>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <div class="member-list">
-                    <img src="img/img_engineer.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
                     <div class="profile">
                         <p class="name">山田 太郎</p>
                         <p class="frame">システムエンジニア</p>
@@ -174,7 +174,7 @@
 
                 <div class="recruit_container">
                     <div class="recruit-item item1">
-                        <img src="img/img_engineer.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
                         <div class="work">
                             <p class="profession">SYSTEM ENGINEER</p>
                             <p class="frame">正社員契約/ 業務委託契約</p>
@@ -183,7 +183,7 @@
                     </div>
 
                     <div class="recruit-item item2">
-                        <img src="img/img_director.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/img_director.png" alt="">
                         <div class="work">
                             <p class="profession">WEB DIRECTOR</p>
                             <p class="frame">正社員契約/ 業務委託契約</p>
@@ -192,7 +192,7 @@
                     </div>
 
                     <div class="recruit-item item3">
-                        <img src="img/img_sales.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/img_sales.png" alt="">
                         <div class="work">
                             <p class="profession">SALES</p>
                             <p class="frame">正社員契約/ 業務委託契約</p>
@@ -207,7 +207,7 @@
 
             <div class="recruit_slick">
                 <div class="recruit-item item1">
-                    <img src="img/img_engineer.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
                     <div class="work">
                         <p class="profession">SYSTEM ENGINEER</p>
                         <p class="frame">正社員契約/ 業務委託契約</p>
@@ -216,7 +216,7 @@
                 </div>
 
                 <div class="recruit-item item2">
-                    <img src="img/img_director.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/img_director.png" alt="">
                     <div class="work">
                         <p class="profession">WEB DIRECTOR</p>
                         <p class="frame">正社員契約/ 業務委託契約</p>
@@ -225,7 +225,7 @@
                 </div>
 
                 <div class="recruit-item item3">
-                    <img src="img/img_sales.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/img_sales.png" alt="">
                     <div class="work">
                         <p class="profession">SALES</p>
                         <p class="frame">正社員契約/ 業務委託契約</p>
@@ -334,14 +334,8 @@
 
         </div>
         <!--form-->
-        <footer class="page_footer">
-          <p class="pagecopy wrapper">
-              <small>© 2021 CENTO.inc All Rights Reserved</small>
-          </p>
-        </footer>
     </section>
-
-
+    <?php get_template_part('includes/footer'); ?>
   <?php get_footer(); ?>
 </body>
 
