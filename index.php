@@ -101,7 +101,7 @@
         </div>
       </div>
       <div class="member-lists wrapper">
-        <?php 
+        <?php
         global $post; //グローバル変数をセット
         $args = [
           'posts_per_page' => 3,
@@ -110,18 +110,20 @@
         $members = get_posts($args);
         foreach ($members as $post) : setup_postdata($post);
         ?>
-        <div class="member-list" id="wrap">
-          <?php if(get_field('img')) : ?>
-          <img src="<?php the_field('img');  ?>" alt="">
-          <?php endif; ?>
-          <div class="profile">
-            <p class="name"><?php the_field('name'); ?></p>
-            <p class="frame"><?php the_field('job'); ?></p>
-            <p><?php the_field('comment'); ?></p>
+          <div class="member-list" id="wrap">
+            <?php if (get_field('img')) : ?>
+              <img src="<?php the_field('img');  ?>" alt="">
+            <?php endif; ?>
+            <div class="profile">
+              <p class="name"><?php the_field('name'); ?></p>
+              <p class="frame"><?php the_field('job'); ?></p>
+              <p><?php the_field('comment'); ?></p>
+            </div>
           </div>
-        </div>
-        <?php endforeach; wp_reset_postdata($post); ?>
-      </div><!--lists-->
+        <?php endforeach;
+        wp_reset_postdata($post); ?>
+      </div>
+      <!--lists-->
 
       </div>
       <!--slick-->
@@ -133,7 +135,6 @@
 
     <section id="recruit">
       <div class="wrapper">
-
         <div class="section_title title-black">
           <p class="read">採用情報</p>
           <h3 class="title-bl">RECRUIT</h3>
@@ -141,37 +142,32 @@
 
 
         <div class="recruit_container">
-          <div class="recruit-item item1">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
-            <div class="work">
-              <p class="profession">SYSTEM ENGINEER</p>
-              <p class="frame">正社員契約/ 業務委託契約</p>
-              <p>様々な業界のWEBサイト、システム構築をご担当いただきます。原則フルリモートのご対応になります。</p>
+          <?php
+          global $post;
+          $args = [
+            'posts_per_page' => 3,
+            'post_type' => 'recruit'
+          ];
+          $recruits = get_posts($args);
+          foreach ($recruits as $post) : setup_postdata($post);
+          ?>
+            <div class="recruit-item">
+              <?php if (get_field('img')) : ?>
+                <img src="<?php the_field('img'); ?>" alt="">
+              <?php endif; ?>
+              <div class="work">
+                <p class="profession"><?php the_field('job'); ?></p>
+                <p class="frame"><?php the_field('contract'); ?></p>
+                <p><?php the_field('comments'); ?></p>
+              </div>
             </div>
-          </div>
-
-          <div class="recruit-item item2">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/img_director.png" alt="">
-            <div class="work">
-              <p class="profession">WEB DIRECTOR</p>
-              <p class="frame">正社員契約/ 業務委託契約</p>
-              <p>WEBサイト・システム構築の進行をご担当いただきます。</p>
-            </div>
-          </div>
-
-          <div class="recruit-item item3">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/img_sales.png" alt="">
-            <div class="work">
-              <p class="profession">SALES</p>
-              <p class="frame">正社員契約/ 業務委託契約</p>
-              <p>ITソリューションに係る営業をお願いしています。社長直下での業務となるため、独立願望のある方は是非、ご応募ください。</p>
-            </div>
-          </div>
+            <!--item-->
+          <?php endforeach;
+          wp_reset_postdata($post); ?>
         </div>
         <!--recruit_container-->
       </div>
       <!--wrapper-->
-
 
       <div class="recruit_slick">
         <div class="recruit-item item1">
@@ -184,7 +180,7 @@
         </div>
 
         <div class="recruit-item item2">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/img_director.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>img/img_director.png" alt="">
           <div class="work">
             <p class="profession">WEB DIRECTOR</p>
             <p class="frame">正社員契約/ 業務委託契約</p>
@@ -193,7 +189,7 @@
         </div>
 
         <div class="recruit-item item3">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/img_sales.png" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>img/img_sales.png" alt="">
           <div class="work">
             <p class="profession">SALES</p>
             <p class="frame">正社員契約/ 業務委託契約</p>
@@ -201,7 +197,7 @@
           </div>
         </div>
       </div>
-      <!--recruit_slick-->
+      
 
       <!-- <p class="details wrapper">詳細はWANTEDLYをご確認ください</p> -->
 

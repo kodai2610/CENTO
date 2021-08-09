@@ -1,4 +1,4 @@
-//slick-----
+//slick-----   
 $(function(){
    $('.slick').slick({
       slidesToShow: 4,

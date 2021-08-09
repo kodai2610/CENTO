@@ -13,7 +13,6 @@ function my_script_init() {
   wp_enqueue_style('css-slick', get_template_directory_uri(). '/slick/slick.css', array('css-slick-theme'), false, 'all');
   wp_enqueue_style('css-destyle',get_template_directory_uri(). '/css/destyle.css', array('css-slick-theme', 'css-slick'), '1.0.0', 'all');
   wp_enqueue_style('css-style',get_template_directory_uri(). '/css/style.css', array('css-destyle'), '1.0.0', 'all');
-  wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true);
   wp_enqueue_script('js-slick', get_template_directory_uri() . '/slick/slick.min.js' , array('jquery'), false, true);
   wp_enqueue_script('js-my', get_template_directory_uri() . '/js/main.js' , array('jquery','js-slick'), '1.0.0', true);
 }
@@ -29,6 +28,7 @@ add_action('init', function() {
     'publicly_queryable'=> true, //クエリを使用許可
     'supports' => ['title'], //ACFで大部分は作る
     'has_archive' => true, //アーカイブページを表示
+    'menu_icon' => 'dashicons-admin-generic',
   ]);
 
   register_post_type('member', [
@@ -38,13 +38,19 @@ add_action('init', function() {
     'menu_position' => 5,
     'publicly_queryable' => true,
     'supports' => ['title'],
+    'menu_icon' => 'dashicons-universal-access'
+  ]);
+
+  register_post_type('recruit', [
+    'label' => 'リクルート',
+    'public' => false,
+    'show_ui' => true,
+    'menu_position' => 5,
+    'publicly_queryable' => true,
+    'supports' => ['title'],  
+    'menu_icon' => 'dashicons-businesswoman',
   ]);
 });
-
-/* カスタム投稿タイプの登録（メンバー）*/
-
-
-/* カスタム投稿タイプの登録(リクルート）*/
 
 
 
