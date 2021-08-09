@@ -45,9 +45,9 @@
         ?>
           <div class="circle">
             <div class="circle-link">
-              <?php if(get_field('top-icon')) : ?>
+              <?php if (get_field('top-icon')) : ?>
                 <img src="<?php the_field('top-icon'); ?>" alt="">
-              <?php endif; ?>  
+              <?php endif; ?>
               <p><?php the_field('title'); ?></p>
             </div>
           </div>
@@ -100,32 +100,28 @@
           <h3 class="title-wh">MEMBER</h3>
         </div>
       </div>
-
       <div class="member-lists wrapper">
+        <?php 
+        global $post; //グローバル変数をセット
+        $args = [
+          'posts_per_page' => 3,
+          'post_type' => 'member',
+        ];
+        $members = get_posts($args);
+        foreach ($members as $post) : setup_postdata($post);
+        ?>
         <div class="member-list" id="wrap">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
+          <?php if(get_field('img')) : ?>
+          <img src="<?php the_field('img');  ?>" alt="">
+          <?php endif; ?>
           <div class="profile">
-            <p class="name">山田 太郎</p>
-            <p class="frame">システムエンジニア</p>
-            <p>様々な業界のWEBサイト、システム構築をご担当いただきます。原則フルリモートのご対応になります。</p>
+            <p class="name"><?php the_field('name'); ?></p>
+            <p class="frame"><?php the_field('job'); ?></p>
+            <p><?php the_field('comment'); ?></p>
           </div>
         </div>
-        <div class="member-list">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
-          <div class="profile">
-            <p class="name">山田 太郎</p>
-            <p class="frame">システムエンジニア</p>
-            <p>様々な業界のWEBサイト、システム構築をご担当いただきます。原則フルリモートのご対応になります。</p>
-          </div>
-        </div>
-        <div class="member-list">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/img_engineer.png" alt="">
-          <div class="profile">
-            <p class="name">山田 太郎</p>
-            <p class="frame">システムエンジニア</p>
-            <p>様々な業界のWEBサイト、システム構築をご担当いただきます。原則フルリモートのご対応になります。</p>
-          </div>
-        </div>
+        <?php endforeach; wp_reset_postdata($post); ?>
+      </div><!--lists-->
 
       </div>
       <!--slick-->

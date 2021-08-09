@@ -27,16 +27,22 @@ add_action('init', function() {
     'show_ui' => true,
     'menu_position' => 5,
     'publicly_queryable'=> true, //クエリを使用許可
-    'supports' => ['title', 'editor',  'thumbnail'],
-    'has_archive' => true, //アーカイブで表示
-    'rewrite' => [
-      'with_front' => false,  //パーマリンク構造を変更
-    ],
+    'supports' => ['title'], //ACFで大部分は作る
+    'has_archive' => true, //アーカイブページを表示
+  ]);
+
+  register_post_type('member', [
+    'label' => 'メンバー',
+    'public' => false,
+    'show_ui' => true, //個別ページは作らない
+    'menu_position' => 5,
+    'publicly_queryable' => true,
+    'supports' => ['title'],
   ]);
 });
 
 /* カスタム投稿タイプの登録（メンバー）*/
-add_action('init', )
+
 
 /* カスタム投稿タイプの登録(リクルート）*/
 
