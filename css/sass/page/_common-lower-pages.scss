@@ -19,6 +19,9 @@
 .breadclumb {
    height:70px;
    display:flex;
+   p {
+      white-space: nowrap;
+   }
    p, span {
       padding: 0 5px;
       line-height: 70px;

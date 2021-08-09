@@ -1,7 +1,3 @@
-
-
-
-
 .bl_pagination {
   margin-top: 100px;
 }
@@ -15,7 +11,7 @@
   margin-right: 4px;
 }
 
-.bl_pagination span {
+.bl_pagination span, .bl_pagination a {
   color: #323232; 
   background: #fff;
   border: 1px solid #ddd;

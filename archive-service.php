@@ -17,8 +17,8 @@
   </div>
   <main>
     <div class="breadclumb wrapper">
-      <p><a href="index.html">HOME</a></p><span>></span>
-      <p><a href="service.html">サービス</a></p>
+      <p><a href="<?php echo esc_url(home_url()); ?>">HOME</a></p><span>></span>
+      <p><a href="<?php echo esc_url(home_url('service')); ?>">サービス</a></p>
     </div>
 
     <div class="lower_content-container">

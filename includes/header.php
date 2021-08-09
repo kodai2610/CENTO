@@ -5,11 +5,11 @@
     </h1>
     <nav>
       <ul class="pc-nav">
-        <li class="nav-list"><a href="#service-top" class="stroke">SERVICE</a></li>
-        <li class="nav-list"><a href="#news" class="stroke">NEWS</a></li>
-        <li class="nav-list"><a href="#recruit" class="stroke">RECRUIT</a></li>
-        <li class="nav-list"><a href="#company" class="stroke">COMPANY</a></li>
-        <li class="libtn"><a href="#contact" class="btn-move sideway"><span>お問い合わせ</span></a></li>
+        <li class="nav-list"><a href="<?php echo esc_url(home_url()); ?>/#service-top" class="stroke">SERVICE</a></li>
+        <li class="nav-list"><a href="<?php echo esc_url(home_url()); ?>/#news" class="stroke">NEWS</a></li>
+        <li class="nav-list"><a href="<?php echo esc_url(home_url()); ?>/#recruit" class="stroke">RECRUIT</a></li>
+        <li class="nav-list"><a href="<?php echo esc_url(home_url()); ?>/#company" class="stroke">COMPANY</a></li>
+        <li class="libtn"><a href="<?php echo esc_url(home_url()); ?>/#contact" class="btn-move sideway"><span>お問い合わせ</span></a></li>
       </ul>
     </nav>
   </div>
@@ -29,11 +29,11 @@
   <nav id="slide-nav">
     <div id="slide-nav-list">
       <ul>
-        <li class="slide-list"><a href="#service-top" class="stroke">SERVICE</a></li>
-        <li class="slide-list"><a href="#news" class="stroke">NEWS</a></li>
-        <li class="slide-list"><a href="#recruit" class="stroke">RECRUIT</a></li>
-        <li class="slide-list"><a href="#company" class="stroke">COMPANY</a></li>
-        <li class="slide-list"><a href="#contact">お問い合わせ</a></li>
+        <li class="slide-list"><a href="<?php echo esc_url(home_url()); ?>/#service-top" class="stroke">SERVICE</a></li>
+        <li class="slide-list"><a href="<?php echo esc_url(home_url()); ?>/#news" class="stroke">NEWS</a></li>
+        <li class="slide-list"><a href="<?php echo esc_url(home_url()); ?>/#recruit" class="stroke">RECRUIT</a></li>
+        <li class="slide-list"><a href="<?php echo esc_url(home_url()); ?>/#company" class="stroke">COMPANY</a></li>
+        <li class="slide-list"><a href="<?php echo esc_url(home_url()); ?>/#contact">お問い合わせ</a></li>
 
       </ul>
     </div>

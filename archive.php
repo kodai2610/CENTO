@@ -14,9 +14,9 @@
     </div>
   
     <div class="breadclumb wrapper breadclumb__newsAr">
-      <p><a href="index.html">HOME</a></p>
+      <p><a href="<?php echo esc_url(home_url()); ?>">HOME</a></p>
       <span>></span>
-      <p><a href="service.html">ニュース</a></p>
+      <p><a href="<?php echo esc_url(home_url('news')); ?>">ニュース</a></p>
     </div>
 
     <div class="ly_wrapper">
@@ -53,28 +53,7 @@
         <?php get_template_part('includes/sidebar'); ?>
       </div>
       <!--wrapper_inner-->
-      <div class="bl_pagination">
-         <ul class="page-numbers">
-            <li>
-               <span class="page-numbers current">1</span>
-            </li>
-            <li>
-               <span class="page-numbers">2</span>
-            </li>
-            <li>
-               <span class="page-numbers">3</span>
-            </li>
-            <li>
-               <span class="page-numbers">4</span>
-            </li>
-            <li>
-               <span class="page-numbers">5</span>
-            </li>
-            <li>
-               <span class="page-numbers">></span>
-            </li>
-         </ul>
-      </div>
+      <?php get_template_part('includes/pagination'); ?>
     </div>
     <!--wrapper-->
     <?php get_template_part('includes/footer'); ?>

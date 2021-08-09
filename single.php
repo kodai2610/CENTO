@@ -16,9 +16,11 @@
   </div>
 
   <div class="breadclumb wrapper breadclumb__newsAr">
-    <p><a href="index.html">HOME</a></p>
+    <p><a href="<?php echo esc_url(home_url()); ?>">HOME</a></p>
     <span>></span>
-    <p><a href="service.html">ニュース</a></p>
+    <p><a href="<?php echo esc_url(home_url('news')); ?>">ニュース</a></p>
+    <span>></span>
+    <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
   </div>
 
   <div class="ly_wrapper">

@@ -1837,6 +1837,10 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   display: flex;
 }
 
+.breadclumb p {
+  white-space: nowrap;
+}
+
 .breadclumb p, .breadclumb span {
   padding: 0 5px;
   line-height: 70px;
@@ -2179,7 +2183,7 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   margin-right: 4px;
 }
 
-.bl_pagination span {
+.bl_pagination span, .bl_pagination a {
   color: #323232;
   background: #fff;
   border: 1px solid #ddd;
@@ -2193,7 +2197,7 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   box-sizing: border-box;
 }
 
-.bl_pagination span.current {
+.bl_pagination span.current, .bl_pagination a.current {
   background-color: #323232;
   color: #fff;
 }
