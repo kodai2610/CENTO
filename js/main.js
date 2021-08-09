@@ -1,5 +1,5 @@
 //slick-----   
-$(function(){
+jQuery(function($){ //{}のローカル空間の中で$にjQueryの機能が詰め込まれた
    $('.slick').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -34,8 +34,7 @@ $(function(){
    });
 });
 
-
-$(function(){
+jQuery(function($) {
    $('.recruit_slick').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -68,16 +67,12 @@ $(function(){
          }
       ]
    });
-});
+})
 
-
-
-
+//wordpressでは$よりjQueryで呼び出す
 
 //ハンバーガー
-
-$(function(){
-
+jQuery(function($) {
    $(".openbtn").click(function () {
       $(this).toggleClass('active');
       $("#slide-nav").toggleClass('panelactive');
@@ -91,13 +86,16 @@ $(function(){
 });
 
 
-
-
 //リンクへスクロール
 
-$('a[href*="#"]').click(function () {
-	var linkHash = $(this).attr('href'); 
-	var pos = $(linkHash).offset().top;	
-	$('body,html').animate({scrollTop: pos}, 500); 
-	return false;
+jQuery(function($) {
+   $('a[href*="#"]').click(function () {
+      var linkHash = $(this).attr('href'); 
+      var pos = $(linkHash).offset().top;	
+      $('body,html').animate({scrollTop: pos}, 500); 
+      return false;
+   });
 });
+   
+
+
