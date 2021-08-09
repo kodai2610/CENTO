@@ -12,7 +12,7 @@
         <h2 class="title-wh">NEWS</h2>
       </div>
     </div>
-
+  
     <div class="breadclumb wrapper breadclumb__newsAr">
       <p><a href="index.html">HOME</a></p>
       <span>></span>
@@ -22,56 +22,32 @@
     <div class="ly_wrapper">
       <div class="ly_wrapper_inner">
         <main class="ly_main">
+          <?php if (have_posts()) : ?>
           <ul class="bl_newsLists">
+            <?php while(have_posts()): the_post(); ?>
             <li class="bl_news">
-              <figure class="bl_news_imgWrapper">
-                <img src="./img/img_engineer.png" alt="" />
-              </figure>
-              <div class="bl_news_body">
-                <time datetime="2021-06-11" class="bl_news_time">2021.06.11</time>
-                <h3 class="bl_news_ttl">
-                  面積2．5倍恵比/代官山の新オフィスへ移転しました
-                </h3>
-                <p class="bl_news_txt">
-                  情けに棹せれば流される。智に働けば角が立つ。どこへ越しても住みにくいと悟った時、詩が生まれて、画が出来る。とかくに人の世は住みにくい。意地を通せば窮屈だ。
-                </p>
-              </div>
-              <!--body-->
+              <a href="<?php the_permalink(); ?>">
+                <figure class="bl_news_imgWrapper">
+                  <?php if(has_post_thumbnail()){
+                    the_post_thumbnail('large');} //600 * 600
+                  ?>  
+                </figure>
+                <div class="bl_news_body">
+                  <time datetime="<?php the_time('Y-m-d'); ?>" class="bl_news_time"><?php the_time('Y.m.d'); ?></time>
+                  <h3 class="bl_news_ttl">
+                    <?php the_title(); ?>
+                  </h3>
+                  <p class="bl_news_txt">
+                    <?php the_excerpt(); ?>
+                  </p>
+                </div>
+                <!--body-->
+              </a>
             </li>
-            <!--news-->
-            <li class="bl_news">
-              <figure class="bl_news_imgWrapper">
-                <img src="./img/img_engineer.png" alt="" />
-              </figure>
-              <div class="bl_news_body">
-                <time datetime="2021-06-11" class="bl_news_time">2021.06.11</time>
-                <h3 class="bl_news_ttl">
-                  面積2．5倍恵比/代官山の新オフィスへ移転しました
-                </h3>
-                <p class="bl_news_txt">
-                  情けに棹せれば流される。智に働けば角が立つ。どこへ越しても住みにくいと悟った時、詩が生まれて、画が出来る。とかくに人の世は住みにくい。意地を通せば窮屈だ。
-                </p>
-              </div>
-              <!--body-->
-            </li>
-            <!--news-->
-            <li class="bl_news">
-              <figure class="bl_news_imgWrapper">
-                <img src="./img/img_engineer.png" alt="" />
-              </figure>
-              <div class="bl_news_body">
-                <time datetime="2021-06-11" class="bl_news_time">2021.06.11</time>
-                <h3 class="bl_news_ttl">
-                  面積2．5倍恵比/代官山の新オフィスへ移転しました
-                </h3>
-                <p class="bl_news_txt">
-                  情けに棹せれば流される。智に働けば角が立つ。どこへ越しても住みにくいと悟った時、詩が生まれて、画が出来る。とかくに人の世は住みにくい。意地を通せば窮屈だ。
-                </p>
-              </div>
-              <!--body-->
-            </li>
+            <?php endwhile; ?>
             <!--news-->
           </ul>
+          <?php endif; ?>
         </main>
 
         <?php get_template_part('includes/sidebar'); ?>

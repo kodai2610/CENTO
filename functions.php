@@ -19,6 +19,31 @@ function my_script_init() {
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
+/* カスタム投稿タイプの登録（サービス,メンバー,リクルート） */
+add_action('init', function() {
+  register_post_type('service', [
+    'label' => 'サービス',
+    'public' => false, //フロントと管理画面で表示するか
+    'show_ui' => true,
+    'menu_position' => 5,
+    'publicly_queryable'=> true, //クエリを使用許可
+    'supports' => ['title', 'editor',  'thumbnail'],
+    'has_archive' => true, //アーカイブで表示
+    'rewrite' => [
+      'with_front' => false,  //パーマリンク構造を変更
+    ],
+  ]);
+});
+
+/* カスタム投稿タイプの登録（メンバー）*/
+add_action('init', )
+
+/* カスタム投稿タイプの登録(リクルート）*/
+
+
+
+
+
 
 /* ページによる投稿の表示数の切り替え */
 function change_posts_per_page($query) {
@@ -32,14 +57,18 @@ add_action('pre_get_posts', 'change_posts_per_page');
 /* アーカイブページの作成 */
 function post_has_archive($args, $post_type) {
   if('post' == $post_type) {
-    $slug = 'news';
-    $args['rewrite'] = array(
-      'slug' => $slug, //スラッグ名の変更を許可
-      'with_front' => false, // パーマリンク設定を/newsにしたときに /news/newsにならないようにする
-    );
-    $args['has_archive'] = $slug;
+    $args['label'] = 'ニュース';    
+    $archive_slug = 'news';
+    $args['rewrite'] = [
+      'slug' => $archive_slug,
+      'with_front' => false, // /newsにする 
+    ];
+    $args['has_archive'] = $archive_slug;
   }
   return $args;
 }
 
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+
+/* 投稿詳細ページのパーマリンク変更 */
