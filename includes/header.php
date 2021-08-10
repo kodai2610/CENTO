@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header-top">
     <h1 class="logo logo_top">
-      <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a>
+      <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a>
     </h1>
     <nav>
       <ul class="pc-nav">

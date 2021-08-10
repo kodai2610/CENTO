@@ -254,7 +254,7 @@
     <button class="line-btn"><a href="https://lin.ee/yxGbYGb" class="line-move sideway-line"><span>LINEでお問い合わせ</span></a></button>
 
     <div class="form">
-      <form action="">
+      <form action="" method="post" novalidate><!--index.phpに飛ばす/postは送信された時に処理するという意味-->
         <div class="forms">
           <label for="name">名前<span>必須</span></label>
           <input type="text" id="name" name="your-name">
@@ -283,10 +283,10 @@
         <!-- xdcfver.com時のリキャプチャー -->
         <!-- <div class="g-recaptcha" data-sitekey="6Lc3s-EbAAAAADBPIdn3noF8J5xWBd8qG92dOdG2"></div> -->
 
-        <button class="btn" type="submit"><a href="#" class="btn-move sideway"><span>送信する</span></a></button>
+        <button class="btn" type="submit"><a class="btn-move sideway"><span>送信する</span></a></button>
 
       </form>
-
+      <div id="dispmsg"></div><!--メッセージを出力-->      
     </div>
     <!--form-->
   </section>

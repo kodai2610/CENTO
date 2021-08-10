@@ -59,10 +59,13 @@ add_action('init', function() {
 
 /* ページによる投稿の表示数の切り替え */
 function change_posts_per_page($query) {
-  if (!is_admin() && $query->is_home() && $query->is_main_query()) { //トップページかつメインクエリの時
-    $query->set('post_type', 'post'); //queryインスタンスのsetというメソッドにアクセス
-    $query->set('posts_per_page', '6');
-  } 
+	if(!is_admin() && $query->is_home() && $query->is_main_query() && wp_is_mobile()){ //実際にスマホで表示した時に変わる
+		$query->set('post_type', 'post'); 
+    	$query->set('posts_per_page', '3');
+	} elseif(!is_admin() && $query->is_home() && $query->is_main_query()) {
+		$query->set('post_type', 'post'); //queryインスタンスのsetというメソッドにアクセス
+    	$query->set('posts_per_page', '6');
+	}
 }
 add_action('pre_get_posts', 'change_posts_per_page');
 

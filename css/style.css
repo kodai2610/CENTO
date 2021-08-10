@@ -1835,6 +1835,7 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
 .breadclumb {
   height: 70px;
   display: flex;
+  overflow: hidden;
 }
 
 .breadclumb p {
