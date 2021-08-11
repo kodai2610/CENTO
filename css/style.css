@@ -1818,6 +1818,64 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   }
 }
 
+.bl_complete {
+  margin-top: -80px;
+}
+
+.bl_complete p {
+  padding: 0 !important;
+}
+
+.bl_complete_check {
+  content: '';
+  margin: 0 auto;
+  width: 70px;
+  height: 35px;
+  border-left: 10px solid skyblue;
+  border-bottom: 10px solid skyblue;
+  transform: rotate(-45deg);
+  border-radius: 4px;
+}
+
+.bl_complete_ttl {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bl_complete_txt {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.bl_complete_box {
+  border: 1px solid #323232;
+  max-width: 700px;
+  margin: 40px auto 0;
+  padding: 50px;
+}
+
+.bl_complete_box dl {
+  display: flex;
+}
+
+.bl_complete_box dl:not(:first-child) {
+  margin-top: 20px;
+}
+
+.bl_complete_box dt {
+  font-weight: normal;
+  font-size: 18px;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.bl_complete_box dd {
+  font-size: 18px;
+}
+
 #pagetitle_view {
   height: 380px;
   background: linear-gradient(rgba(86, 153, 206, 0.8), rgba(86, 153, 206, 0.8)), url(../img/servicepage-top.jpg);

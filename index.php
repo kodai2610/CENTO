@@ -256,7 +256,8 @@
     <button class="line-btn"><a href="https://lin.ee/yxGbYGb" class="line-move sideway-line"><span>LINEでお問い合わせ</span></a></button>
 
     <div class="form">
-      <form action="" method="POST" id="mailform">
+      <?php echo do_shortcode('[mwform_formkey key="93"]'); ?>
+      <!-- <form action="" method="POST" id="mailform">
         <div class="forms">
           <label for="nameval">名前<span>必須</span></label>
           <input type="text" id="name" name="nameval" required>
@@ -284,11 +285,43 @@
         <p>※営業メールはお断りしております</p>
         <!-- xdcfver.com時のリキャプチャー -->
         <!-- <div class="g-recaptcha" data-sitekey="6Lc3s-EbAAAAADBPIdn3noF8J5xWBd8qG92dOdG2"></div> -->
-        <button class="btn" type="submit"><a class="btn-move sideway"><span>送信する</span></a></button>
-      </form>
+        <!-- <button class="btn" type="submit"><a class="btn-move sideway"><span>送信する</span></a></button>
+      </form>  -->
     </div>
     <!--form-->
   </section>
+  <!-- <div class="bl_complete">
+    <div class="bl_complete_check"></div>
+    <h4 class="bl_complete_ttl">お問い合わせありがとうございます。入力が完了いたしました。</h4>
+    <p class="bl_complete_txt">
+      お問い合わせ内容については、順次対応させていただきます。<br>
+      システムによる自動返信にて、受付完了メールを送信しております。<br>
+      受付完了メールが届かない場合は、お手数ですが再度お問い合わせいただくか、弊社までご一報ください
+    </p><!--txt-->
+    <!-- <div class="bl_complete_box">
+      <dl>
+        <dt>名前：</dt>
+        <dd>秋和昂大</dd>
+      </dl>
+      <dl>
+        <dt>メールアドレス：</dt>
+        <dd>koudai_akiwa1230@keio.jp</dd>   
+      </dl>
+      <dl>
+        <dt>電話番号：</dt>
+        <dd>000-000-000</dd>
+      </dl>
+      <dl>
+        <dt>ご住所：</dt>
+        <dd>000-0000 あああああああああああああああ</dd>
+      </dl>
+      <dl>
+        <dt>お問い合わせ内容：</dt>
+        <dd>ああああああああああああああああああああああああああああああああああああああああああ</dd>
+      </dl>
+    </div><!--box-->
+    <!-- <button class="btn"><a class="btn-move sideway" href=""><span>トップへ戻る</span></a></button>
+  </div>  -->
   <?php get_template_part('includes/footer'); ?>
   <?php get_footer(); ?>
 </body>
