@@ -1743,32 +1743,32 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   }
 }
 
-.forms input[type="text"],
+.forms input[type="text"], .forms input[type="email"], .forms input[type="tel"],
 .forms textarea {
   background: #F2F2F2;
   padding: 10px;
   font-size: 1rem;
 }
 
-.forms input[type="text"] {
+.forms input[type="text"], .forms input[type="email"], .forms input[type="tel"] {
   width: 250px;
 }
 
 @media (min-width: 1920px) {
-  .forms input[type="text"] {
+  .forms input[type="text"], .forms input[type="email"], .forms input[type="tel"] {
     width: 300px;
   }
 }
 
 @media (max-width: 1200px) {
-  .forms input[type="text"] {
+  .forms input[type="text"], .forms input[type="email"], .forms input[type="tel"] {
     width: 100%;
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 750px) {
-  .forms input[type="text"] {
+  .forms input[type="text"], .forms input[type="email"], .forms input[type="tel"] {
     width: 100%;
   }
 }

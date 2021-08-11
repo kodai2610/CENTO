@@ -168,28 +168,30 @@
         <!--recruit_container-->
       </div>
       <!--wrapper-->
-      
-      
+
+
       <div class="recruit_slick">
         <?php
-          global $post;
-          $args = [
-            'posts_per_page' => 3,
-            'post_type' => 'recruit'
-          ];
-          $recruits = get_posts($args);
-          foreach ($recruits as $post) : setup_postdata($post);
-          ?>
-        <div class="recruit-item">
-          <img src="<?php the_field('img'); ?>" alt="">
-          <div class="work">
-            <p class="profession"><?php the_field('job'); ?></p>
-            <p class="frame"><?php the_field('contract'); ?></p>
-            <p><?php the_field('comments'); ?></p>
+        global $post;
+        $args = [
+          'posts_per_page' => 3,
+          'post_type' => 'recruit'
+        ];
+        $recruits = get_posts($args);
+        foreach ($recruits as $post) : setup_postdata($post);
+        ?>
+          <div class="recruit-item">
+            <img src="<?php the_field('img'); ?>" alt="">
+            <div class="work">
+              <p class="profession"><?php the_field('job'); ?></p>
+              <p class="frame"><?php the_field('contract'); ?></p>
+              <p><?php the_field('comments'); ?></p>
+            </div>
           </div>
-        </div>
-        <?php endforeach; wp_reset_postdata($post); ?>
-      </div><!--slick-->
+        <?php endforeach;
+        wp_reset_postdata($post); ?>
+      </div>
+      <!--slick-->
 
       <!-- <p class="details wrapper">詳細はWANTEDLYをご確認ください</p> -->
 
@@ -254,39 +256,36 @@
     <button class="line-btn"><a href="https://lin.ee/yxGbYGb" class="line-move sideway-line"><span>LINEでお問い合わせ</span></a></button>
 
     <div class="form">
-      <form action="" method="post" novalidate><!--index.phpに飛ばす/postは送信された時に処理するという意味-->
+      <form action="" method="POST" id="mailform">
         <div class="forms">
-          <label for="name">名前<span>必須</span></label>
-          <input type="text" id="name" name="your-name">
+          <label for="nameval">名前<span>必須</span></label>
+          <input type="text" id="name" name="nameval" required>
         </div>
 
         <div class="forms">
-          <label for="email">メールアドレス<span>必須</span></label>
-          <input type="text" id="email" name="your-email">
+          <label for="mailval">メールアドレス<span>必須</span></label>
+          <input type="email" id="email" name="mailval" required>
         </div>
 
         <div class="forms">
-          <label for="tel">お電話番号</label>
-          <input type="text" id="tel" name="your-tel">
+          <label for="telval">お電話番号</label>
+          <input type="tel" id="tel" name="telval">
         </div>
 
         <div class="forms">
-          <label for="address">ご住所</label>
-          <input type="text" id="address" name="your-address">
+          <label for="addressval">ご住所</label>
+          <input type="text" id="address" name="addressval" required>
         </div>
 
         <div class="forms">
-          <label for="message" class="form-mess">お問い合わせ内容</label>
-          <textarea name="your-message" id="message"></textarea>
+          <label for="textval" class="form-mess">お問い合わせ内容</label>
+          <textarea name="textval" id="message" required></textarea>
         </div>
         <p>※営業メールはお断りしております</p>
         <!-- xdcfver.com時のリキャプチャー -->
         <!-- <div class="g-recaptcha" data-sitekey="6Lc3s-EbAAAAADBPIdn3noF8J5xWBd8qG92dOdG2"></div> -->
-
         <button class="btn" type="submit"><a class="btn-move sideway"><span>送信する</span></a></button>
-
       </form>
-      <div id="dispmsg"></div><!--メッセージを出力-->      
     </div>
     <!--form-->
   </section>
