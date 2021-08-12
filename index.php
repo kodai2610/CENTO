@@ -322,7 +322,7 @@
     </div><!--box-->
     <!-- <button class="btn"><a class="btn-move sideway" href=""><span>トップへ戻る</span></a></button>
   </div>  -->
-  <?php get_template_part('includes/footer'); ?>
+  <?php get_template_part('includes/footer'); ?>      
   <?php get_footer(); ?>
 </body>
 

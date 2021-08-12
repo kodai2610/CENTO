@@ -173,3 +173,23 @@
 
 
 
+/* エラー時の処理 */
+
+.mw_wp_form .error {
+    position: absolute;
+    top: 45px;
+    left: 36%;
+    @include tab {
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.mw_wp_form .forms.is_error {
+    padding-bottom: 25px;
+    position: relative;
+}
+
+
+

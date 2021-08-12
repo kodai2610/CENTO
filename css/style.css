@@ -1876,6 +1876,26 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   font-size: 18px;
 }
 
+/* エラー時の処理 */
+.mw_wp_form .error {
+  position: absolute;
+  top: 45px;
+  left: 36%;
+}
+
+@media (max-width: 1200px) {
+  .mw_wp_form .error {
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.mw_wp_form .forms.is_error {
+  padding-bottom: 25px;
+  position: relative;
+}
+
 #pagetitle_view {
   height: 380px;
   background: linear-gradient(rgba(86, 153, 206, 0.8), rgba(86, 153, 206, 0.8)), url(../img/servicepage-top.jpg);

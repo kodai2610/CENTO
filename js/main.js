@@ -99,3 +99,17 @@ jQuery(function($) {
    
 
 
+//mw wp form
+jQuery(function($){
+   if($('.error')[0]) { //.errorが発生した時
+      $('.error').each(function(){
+         $(this).parent().addClass('is_error');
+      });
+      $('.mw_wp_form').addClass('mw_wp_form_error');
+      const errorEl = $('.mw_wp_form_error'); 
+      const position = errorEl.parent().offset().top + 300; //offsetはtopとleftのオブジェクトを返す
+      $('body,html').animate({scrollTop : position});
+   };
+});
+
+
