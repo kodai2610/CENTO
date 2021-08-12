@@ -36,7 +36,7 @@
     max-width: 900px;
     p {
         text-align: center;
-        padding: 50px 0 20px;
+        // padding: 50px 0 20px;
     }
     @include sp {
         margin: 220px 0 200px;
@@ -135,17 +135,30 @@
         border-bottom: 10px solid skyblue;
         transform: rotate(-45deg);
         border-radius: 4px;
+        @include sp {
+            width: 50px;
+            height: 30px;
+            border-left: 8px solid skyblue;
+            border-bottom: 8px solid skyblue;
+        }
     }
     &_ttl {
         font-size: 24px;
         text-align: center;
         margin-top: 50px;
+        line-height: 1.2;
+        @include sp {
+            font-size: 20px;
+        }
     }
     &_txt {
         margin-top: 30px;
         text-align: center;
         font-size: 18px;
         line-height: 1.5;
+        @include sp {
+            font-size: 16px;
+        }
     }
 
     &_box {
@@ -153,25 +166,47 @@
         max-width: 700px;
         margin: 40px auto 0;
         padding: 50px;
+        @include sp {
+            padding: 15px;
+        }
         dl {
             display: flex;
+            flex-wrap: wrap;
             &:not(:first-child) {
                 margin-top: 20px;
+            }
+            @include sp {
+                flex-direction: column;
             }
         }
         dt {
             font-weight: normal;
             font-size: 18px;
+            line-height: 1.5;
             white-space: nowrap;
             margin-right: 10px;
+            @include sp{
+                font-size:16px;
+            }
         }
         dd {
             font-size: 18px;
+            line-height: 1.5;
+            max-width: 100%;
+            overflow-wrap: break-word;
+            @include sp{
+                font-size:16px;
+                margin-top: 10px;
+            }
         }
     }
 }
 
-
+.sp_except {
+    @include sp {
+        display: none!important;
+    }
+}
 
 /* エラー時の処理 */
 
@@ -193,3 +228,17 @@
 
 
 
+/*ボタンの配置変更 */
+.bl_form_reject {
+    padding: 50px 0 0;
+    @include sp {
+        padding: 20px 0 0;
+    }
+}
+
+.btn.btn__form {
+    margin-top: 50px;
+    @include sp {
+        margin-top: 40px;   
+    }
+}

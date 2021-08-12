@@ -1689,7 +1689,6 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
 
 .form p {
   text-align: center;
-  padding: 50px 0 20px;
 }
 
 @media (max-width: 750px) {
@@ -1837,10 +1836,26 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   border-radius: 4px;
 }
 
+@media (max-width: 750px) {
+  .bl_complete_check {
+    width: 50px;
+    height: 30px;
+    border-left: 8px solid skyblue;
+    border-bottom: 8px solid skyblue;
+  }
+}
+
 .bl_complete_ttl {
   font-size: 24px;
   text-align: center;
   margin-top: 50px;
+  line-height: 1.2;
+}
+
+@media (max-width: 750px) {
+  .bl_complete_ttl {
+    font-size: 20px;
+  }
 }
 
 .bl_complete_txt {
@@ -1850,6 +1865,12 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   line-height: 1.5;
 }
 
+@media (max-width: 750px) {
+  .bl_complete_txt {
+    font-size: 16px;
+  }
+}
+
 .bl_complete_box {
   border: 1px solid #323232;
   max-width: 700px;
@@ -1857,23 +1878,59 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
   padding: 50px;
 }
 
+@media (max-width: 750px) {
+  .bl_complete_box {
+    padding: 15px;
+  }
+}
+
 .bl_complete_box dl {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .bl_complete_box dl:not(:first-child) {
   margin-top: 20px;
 }
 
+@media (max-width: 750px) {
+  .bl_complete_box dl {
+    flex-direction: column;
+  }
+}
+
 .bl_complete_box dt {
   font-weight: normal;
   font-size: 18px;
+  line-height: 1.5;
   white-space: nowrap;
   margin-right: 10px;
 }
 
+@media (max-width: 750px) {
+  .bl_complete_box dt {
+    font-size: 16px;
+  }
+}
+
 .bl_complete_box dd {
   font-size: 18px;
+  line-height: 1.5;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 750px) {
+  .bl_complete_box dd {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sp_except {
+    display: none !important;
+  }
 }
 
 /* エラー時の処理 */
@@ -1894,6 +1951,27 @@ a:nth-of-type(5) .news-box > a:nth-of-type(6) {
 .mw_wp_form .forms.is_error {
   padding-bottom: 25px;
   position: relative;
+}
+
+/*ボタンの配置変更 */
+.bl_form_reject {
+  padding: 50px 0 0;
+}
+
+@media (max-width: 750px) {
+  .bl_form_reject {
+    padding: 20px 0 0;
+  }
+}
+
+.btn.btn__form {
+  margin-top: 50px;
+}
+
+@media (max-width: 750px) {
+  .btn.btn__form {
+    margin-top: 40px;
+  }
 }
 
 #pagetitle_view {
