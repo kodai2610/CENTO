@@ -1,0 +1,33 @@
+.bl_pagination {
+  margin-top: 100px;
+}
+
+.page-numbers {
+  text-align: center;
+}
+
+.bl_pagination li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.bl_pagination span, .bl_pagination a {
+  color: #323232; 
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+
+  &.current {
+    background-color: #323232;
+    color: #fff;
+  }
+}
+
+

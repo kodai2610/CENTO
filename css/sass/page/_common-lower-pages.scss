@@ -19,11 +19,17 @@
 .breadclumb {
    height:70px;
    display:flex;
+   overflow: hidden;
+   p {
+      white-space: nowrap;
+   }
    p, span {
       padding: 0 5px;
       line-height: 70px;
    }
 }
+
+
 
 // サービス、ニュース共通コンテナー------
 .lower_content-container {

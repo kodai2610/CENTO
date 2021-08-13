@@ -1,5 +1,5 @@
-//slick-----
-$(function(){
+//slick-----   
+jQuery(function($){ //{}のローカル空間の中で$にjQueryの機能が詰め込まれた
    $('.slick').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -34,8 +34,7 @@ $(function(){
    });
 });
 
-
-$(function(){
+jQuery(function($) {
    $('.recruit_slick').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -68,16 +67,12 @@ $(function(){
          }
       ]
    });
-});
+})
 
-
-
-
+//wordpressでは$よりjQueryで呼び出す
 
 //ハンバーガー
-
-$(function(){
-
+jQuery(function($) {
    $(".openbtn").click(function () {
       $(this).toggleClass('active');
       $("#slide-nav").toggleClass('panelactive');
@@ -91,13 +86,30 @@ $(function(){
 });
 
 
-
-
 //リンクへスクロール
 
-$('a[href*="#"]').click(function () {
-	var linkHash = $(this).attr('href'); 
-	var pos = $(linkHash).offset().top;	
-	$('body,html').animate({scrollTop: pos}, 500); 
-	return false;
+jQuery(function($) {
+   $('a[href*="#"]').click(function () {
+      var linkHash = $(this).attr('href'); 
+      var pos = $(linkHash).offset().top;	
+      $('body,html').animate({scrollTop: pos}, 500); 
+      return false;
+   });
 });
+   
+
+
+//mw wp form
+jQuery(function($){
+   if($('.error')[0]) { //.errorが発生した時
+      $('.error').each(function(){
+         $(this).parent().addClass('is_error');
+      });
+      $('.mw_wp_form').addClass('mw_wp_form_error');
+      const errorEl = $('.mw_wp_form_error'); 
+      const position = errorEl.parent().offset().top + 300; //offsetはtopとleftのオブジェクトを返す
+      $('body,html').animate({scrollTop : position});
+   };
+});
+
+
